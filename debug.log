@@ -1,0 +1,21 @@
+[2022-06-07 14:33:46,853] p34868 {.\address_book\main.py:63} INFO - Dummy Info
+[2022-06-07 14:35:32,036] p39072 {.\address_book\main.py:106} ERROR - Exception encountered while deleting address details by Id : {ex}
+[2022-06-07 14:38:55,468] p3828 {.\address_book\main.py:99} ERROR - Exception encountered while deleting address details by Id : {ex}
+[2022-06-07 14:44:18,002] p8736 {.\address_book\main.py:94} ERROR - Exception encountered while deleting address details by Id : {ex}
+[2022-06-07 14:55:33,190] p33088 {.\address_book\main.py:101} ERROR - Exception encountered while deleting address details by Id : {ex}
+[2022-06-07 14:56:46,987] p28380 {.\address_book\main.py:93} ERROR - Exception encountered while deleting address details by Id : {ex}
+[2022-06-07 14:57:48,923] p30140 {.\address_book\main.py:92} ERROR - Exception encountered while deleting address details by Id : {ex}
+[2022-06-07 15:16:28,654] p24784 {.\address_book\main.py:138} ERROR - Exception encountered while deleting address details by Id : {ex}
+[2022-06-07 15:19:17,061] p36408 {.\address_book\main.py:138} ERROR - Exception encountered while deleting address details by Id : {ex}
+[2022-06-07 15:20:40,221] p28416 {.\address_book\main.py:138} ERROR - Exception encountered while deleting address details by Id : {ex}
+[2022-06-07 15:23:33,482] p22720 {.\address_book\main.py:138} ERROR - Exception encountered while deleting address details by Id : {ex}
+[2022-06-07 16:01:33,441] p4100 {.\address_book\main.py:203} ERROR - Exception encountered while deleting address details by Id : {ex}
+[2022-06-07 16:02:28,685] p33180 {.\address_book\main.py:203} ERROR - Exception encountered while deleting address details by Id : 
+[2022-06-07 16:03:31,282] p7292 {.\address_book\main.py:203} ERROR - Exception encountered while deleting address details by Id : 
+[2022-06-07 16:03:47,457] p37272 {.\address_book\main.py:203} ERROR - Exception encountered while deleting address details by Id : 
+[2022-06-07 16:04:26,895] p33292 {.\address_book\main.py:203} ERROR - Exception encountered while deleting address details by Id : 
+[2022-06-07 16:04:40,871] p9676 {.\address_book\main.py:203} ERROR - Exception encountered while deleting address details by Id : 
+[2022-06-07 16:07:25,629] p30352 {.\address_book\main.py:203} ERROR - Exception encountered while deleting address details by Id : 
+[2022-06-07 16:56:12,609] p20264 {.\address_book\main.py:168} INFO - All address details fetched succesfully
+[2022-06-07 17:00:07,506] p27904 {.\address_book\main.py:65} INFO - New address details added to database successfully
+[2022-06-07 17:01:14,979] p27904 {.\address_book\main.py:168} INFO - All address details fetched succesfully
