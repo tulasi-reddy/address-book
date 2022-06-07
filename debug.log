@@ -19,3 +19,13 @@
 [2022-06-07 16:56:12,609] p20264 {.\address_book\main.py:168} INFO - All address details fetched succesfully
 [2022-06-07 17:00:07,506] p27904 {.\address_book\main.py:65} INFO - New address details added to database successfully
 [2022-06-07 17:01:14,979] p27904 {.\address_book\main.py:168} INFO - All address details fetched succesfully
+[2022-06-07 19:32:44,697] p21356 {.\address_book\main.py:164} INFO - All address details fetched succesfully
+[2022-06-07 19:34:34,536] p21356 {.\address_book\main.py:61} INFO - New address details added to database successfully
+[2022-06-07 19:34:57,070] p21356 {.\address_book\main.py:194} INFO - Address details by id fetched succesfully
+[2022-06-07 19:36:06,197] p21356 {.\address_book\main.py:131} INFO - Address details with id : 6 updated succesfully
+[2022-06-07 19:36:42,493] p21356 {.\address_book\main.py:92} INFO - Address details with id : 5 deleted succesfully
+[2022-06-07 19:36:52,503] p21356 {.\address_book\main.py:164} INFO - All address details fetched succesfully
+[2022-06-07 19:37:36,214] p21356 {.\address_book\main.py:222} INFO - Address details by co-ordinates fetched succesfully
+[2022-06-07 19:37:44,095] p21356 {.\address_book\main.py:222} INFO - Address details by co-ordinates fetched succesfully
+[2022-06-07 19:38:20,736] p32372 {.\address_book\main.py:226} ERROR - Exception encountered while deleting address details by Id : {ex}
+[2022-06-07 19:39:05,340] p15896 {.\address_book\main.py:222} INFO - Address details by co-ordinates fetched succesfully

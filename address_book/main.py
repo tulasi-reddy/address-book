@@ -10,10 +10,6 @@ import logging
 dictConfig(schemas.LogConfig().dict())
 logger = logging.getLogger("addressbook")
 
-# logger.info("Dummy Info")
-# logger.error("Dummy Error")
-# logger.debug("Dummy Debug")
-# logger.warning("Dummy Warning")
 
 app = FastAPI()
 
@@ -131,7 +127,6 @@ def update_address_by_id(id, request : schemas.Address , response : Response,db 
 
     """
     try:  
-        import pdb; pdb.set_trace() 
         address = db.query(models.Address).filter(models.Address.id == id)
         if address.count() < 1:
             return JSONResponse (status_code = status.HTTP_204_NO_CONTENT, content = {"message": "Address with the id does not exist"})
@@ -178,7 +173,7 @@ def fetch_all_addresses(db : Session = Depends(get_db)):
 # ********************************* FETCH ADDRESS DETAILS BY ID ********************************* #       
 
 @app.get('/address/{id}', status_code=200)
-def fetch_address_by_id(id, db : Session = Depends(get_db)):
+def fetch_address_by_id(id, response : Response, db : Session = Depends(get_db)):
     """
         This api is used to add new address details
 
@@ -190,10 +185,12 @@ def fetch_address_by_id(id, db : Session = Depends(get_db)):
         dict: Address details are fetched as response
 
     """
-    import pdb; pdb.set_trace()
-    address = db.query(models.Address).filter(models.Address.id == id)
-    if address.count() < 1:
-        return HTTPException (status_code = status.HTTP_204_NO_CONTENT, detail = "Address with the id does not exist")
+    address = db.query(models.Address).filter(models.Address.id == id).first()
+    if not address:
+        response.status_code = status.HTTP_404_NOT_FOUND
+        return {'details' : f"Address details between does not exist"}
+    
+    logger.info(f"Address details by id fetched succesfully")
     return address
 
 # ------------------------------------- END ------------------------------------- #     
@@ -216,11 +213,12 @@ def fetch_address_details_by_coordinates(latitude, longitude, distance, response
 
     """
     try: 
-        stmt = text("""select * from Address where (latitude - :startlat)*2 + (longitude-:startlng)*2 <  (:distance/111)*2""")
+        stmt = text("""select * from Address where (latitude - :startlat)*(latitude - :startlat) + (longitude-:startlng)*(longitude-:startlng) <  (:distance/111)*(:distance/111)""")
         result = session.query(models.Address).from_statement(stmt).params(startlat=latitude, startlng=longitude,distance=distance).all()
         if len(result) < 1:
             response.status_code = status.HTTP_404_NOT_FOUND
             return {'details' : f"Address details between latitude {latitude} and logitude {longitude} with distance {distance} does not exist"}
+        logger.info(f"Address details by co-ordinates fetched succesfully")
         return result
     
     except Exception as ex: 
