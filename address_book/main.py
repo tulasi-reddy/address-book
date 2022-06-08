@@ -32,6 +32,7 @@ def insert_address(request:schemas.Address, response : Response, db : Session = 
         This api is used to add new address details\n
 
         Parameters:\n
+        
         {\n
             address_line_one (str) : address line 1 (door no. / flat no.)\n
             address_line_two (str) : address line 2 (street number / building name/ apartment name)\n
@@ -43,6 +44,20 @@ def insert_address(request:schemas.Address, response : Response, db : Session = 
             land_mark (str) : Any place near to his/her address which can be easily seen and recognized from a distance\n
             latitude (float) : Measurement of distance north or south of the Equator (to point address)\n
             longitude (float) : The measurement east or west of the prime meridian (to point address)\n
+        }\n
+        
+        
+        sample data : \n
+        {\n
+            "address_line_one": "Shop No 2",
+            "address_line_two": "Rameshghar, T.h.kataria Marg,",
+            "address_line_three": "Matunga (west)",
+            "city_name": "Mumbai"
+            "state_name": "Maharashtra",
+            "pin_code": "400016",
+            "land_mark": "near gandhi circle",
+            "latitude": 13.001159,
+            "longitude": 77.748224
         }\n
         
         Returns: \n
@@ -208,6 +223,18 @@ def fetch_address_details_by_coordinates(latitude, longitude, distance, response
         latitude (float) : Measurement of distance north or south of the Equator (to point address) \n
         longitude (float) : The measurement east or west of the prime meridian (to point address) \n
         
+        Sample data: \n
+        Positive test case: { \n
+            distance : 500 \n
+            latitude : 12.961359 \n
+            longitude : 77.708424 \n
+        } \n
+        
+        Negative test case:{ \n
+            distance : 50 \n
+            latitude : -12.961359 \n
+            longitude : -77.708424 \n
+        }
         Returns: \n
         list: Address details are fetched as response based on given inputs
 

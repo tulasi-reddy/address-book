@@ -29,3 +29,11 @@
 [2022-06-07 19:37:44,095] p21356 {.\address_book\main.py:222} INFO - Address details by co-ordinates fetched succesfully
 [2022-06-07 19:38:20,736] p32372 {.\address_book\main.py:226} ERROR - Exception encountered while deleting address details by Id : {ex}
 [2022-06-07 19:39:05,340] p15896 {.\address_book\main.py:222} INFO - Address details by co-ordinates fetched succesfully
+[2022-06-07 20:30:17,934] p33612 {.\address_book\main.py:61} INFO - New address details added to database successfully
+[2022-06-07 20:32:34,659] p38268 {.\address_book\main.py:163} INFO - All address details fetched succesfully
+[2022-06-08 13:24:46,919] p9928 {.\address_book\main.py:178} INFO - All address details fetched succesfully
+[2022-06-08 13:26:28,421] p9928 {.\address_book\main.py:76} INFO - New address details added to database successfully
+[2022-06-08 13:26:41,703] p9928 {.\address_book\main.py:208} INFO - Address details by id fetched succesfully
+[2022-06-08 13:27:24,375] p9928 {.\address_book\main.py:150} INFO - Address details with id : 8 updated succesfully
+[2022-06-08 13:28:00,187] p9928 {.\address_book\main.py:248} INFO - Address details by co-ordinates fetched succesfully
+[2022-06-08 13:28:16,313] p9928 {.\address_book\main.py:107} INFO - Address details with id : 8 deleted succesfully
